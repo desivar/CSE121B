@@ -4,21 +4,22 @@
 
 /* Step 2 - Variables */
 
-const fullName= "Desire Vargas";
+let fullName='Desire Vargas';
+
 const currentYear=new Date().getFullYear();
-const profilePicture="images/me.png";
+const profilePicture="images/yo2.jpg";
 
 
-/* Step 3 - Element Variables */
-
+/* Step 3 -Element Variables*/
+const foodElement=document.querySelector('#food');
 const yearElement=document.querySelector("#year");
-const imageElement=document.querySelector('images');
-const foodElement=documnet.querySelector('#food');
+const imageElement=document.querySelector('img');
+
 
 /* Step 4 - Adding Content */
 yearElement.textContent=currentYear;
 imageElement.setAttribute('src', profilePicture);
-imageElement.setAttribute('alt','This is ${fullname}.She is a BYU-Idaho Pathway Worldwide student.');
+imageElement.setAttribute('alt', 'This is ${fullName}.She is a BYU-Idaho student');
 
 
 
@@ -26,12 +27,12 @@ imageElement.setAttribute('alt','This is ${fullname}.She is a BYU-Idaho Pathway 
 
 
 /* Step 5 - Array */
+let favFoods=['Chicken','Soups','Salads','Strawberries'];
 
-let favfoods=["Rice and Beans","Soup","Strawberries", "Rice Cake", "Mango", "Chicken"];
-document.getElementById('food').innerHTML=favfoods;
-let newfood="Grapes";
-favfoods.push(newfood);
-foodElement.innerHTML+='<br>${favfoods}';
+foodElement.innerHTML=favFoods;
+let newFood='Grapes';
+favFoods.push(newFood);
+foodElement.innerHTML+= '<br>${favFoods}';
 
 
 
