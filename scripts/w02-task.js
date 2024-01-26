@@ -4,35 +4,45 @@
 
 /* Step 2 - Variables */
 
-let fullName='Desire Vargas';
+const fullName = "Desire Vargas";
 
-const currentYear=new Date().getFullYear();
-const profilePicture="images/yo2.jpg";
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
+const profilePicture = "images/yo2.jpg";
 
 
-/* Step 3 -Element Variables*/
-const foodElement=document.querySelector('#food');
-const yearElement=document.querySelector("#year");
-const imageElement=document.querySelector('img');
-
+/* Step 3 - Element Variables */
+const nameElement = document.getElementById ("name");
+const foodElement = document.getElementById ("food");
+const yearElement = document.querySelector ("#year");
+const imageElement = document.querySelector("img");
 
 /* Step 4 - Adding Content */
-yearElement.textContent=currentYear;
-imageElement.setAttribute('src', profilePicture);
-imageElement.setAttribute('alt', 'This is ${fullName}.She is a BYU-Idaho student');
-
-
-
-
-
+nameElement.innerHTML = `<strong>${fullName}</strong>`;
+yearElement.textContent = `${currentYear}`;
+imageElement.src = profilePicture;
+imageElement.alt = `Profile image of ${fullName}`;
 
 /* Step 5 - Array */
-let favFoods=['Chicken','Soups','Salads','Strawberries'];
+const favoriteFood = ["Rice and Beans", "Salads", "Soups",
+"Chicken"];
 
-foodElement.innerHTML=favFoods;
-let newFood='Grapes';
-favFoods.push(newFood);
-foodElement.innerHTML+= '<br>${favFoods}';
+foodElement.innerHTML = `<p>${favoriteFood}</p>`;
+
+const faFood = "Grapes";
+
+favoriteFood.push (faFood);
+
+foodElement.innerHTML += `<br>${favoriteFood}`;
+
+favoriteFood.shift ();
+
+foodElement.innerHTML += `<br>${favoriteFood}`;
+
+favoriteFood.pop ();
+
+foodElement.innerHTML += `<br>${favoriteFood}`;
 
 
 
