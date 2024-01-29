@@ -2,7 +2,7 @@
 
 /* Profile Object  */
 
-const myProject = {
+const myProfile = {
     name:"Desire Vargas",
     photo:"images/yo2.jpg",
     favoriteFoods:[
@@ -14,7 +14,7 @@ const myProject = {
 
 /* Populate Profile Object with placesLive objects */
 
-myProject ['placesLived'] = ([
+myProfile ['placesLived'] = ([
     {
         place:"La Ceiba",
         lenght: "24 years",
@@ -49,20 +49,20 @@ lengh:"7 years",
 /* DOM Manipulation - Output */
 
 /* Name */
-document.querySelector('#name').textContent = myProject.name;
+document.querySelector('#name').textContent = myProfile.name;
 /* Photo with attributes */
-document.querySelector ('#photo').src = myProject.photo;
+document.querySelector ('#photo').src = myProfile.photo;
 
 
 /* Favorite Foods List*/
-myProject.favoriteFoods.forEach(function (food){
+myProfile.favoriteFoods.forEach(function (food){
     let newLiElement = document.createElement ('li');
     newLiElement.textContent = food;
     document.querySelector('#favorite-foods').appendChild (newLiElement);
 });
 
 /* Hobbies List */
-myProject.hobbies.forEach( function (hobby) {
+myProfile.hobbies.forEach( function (hobby) {
     let newliElement2 = document.createElement('li');
     newliElement2.textContent = hobby;
     document.querySelector('#hobbies').appendChild (newliElement2)
@@ -74,6 +74,7 @@ myProject.hobbies.forEach( function (hobby) {
 function placesLivedLayout (placesLivedArray) {
     const placesLength = placesLivedArray.map ((pL) => 
         `<dt><b>${pL.place}</b></dt>
+
         <dd><sup><small>${pL.length}</small></sup></dd>`
     );
     document.querySelector('#places-lived').innerHTML = placesLength.join("");
@@ -81,4 +82,4 @@ function placesLivedLayout (placesLivedArray) {
 
 //let element = document.querySelector('');
 //element.style.color = 'red';
-placesLivedLayout (myProject.placesLived);
+placesLivedLayout (myProfile.placesLived);
