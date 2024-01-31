@@ -14,44 +14,43 @@ const myProfile = {
 
 /* Populate Profile Object with placesLive objects */
 
-myProfile ['placesLived'] = ([
+myProfile ['placesLived'] = [
     {
         place:"La Ceiba",
-        lenght: "24 years",
+        length:" 24 years"
     },
+
     {
         place:"Coyoles Central",
-        leght:"5 years",
+        length:"5 years"
     },
     {
-    place: "Roatan",
-    lenght:"3 years",
+        place: "Roatan",
+        length:"3 years"
     },
     {
-    place:"San Pedro Sula",
-    lenght: "2 years",
+        place:"San Pedro Sula",
+        length: "2 years"
     },
     {
         place:"Tegucigalpa",
-        lenght:"5 years",
+        length:"5 years"
     },
     {
-place: "Siguatepeque",
-lengh:"7 years",
+        place: "Siguatepeque",
+        length:"7 years"
     },
     {
         place:"La Paz",
-        lenght:"19 years",
+        length:"10 years"
     }
-]
-);
-
+];
 /* DOM Manipulation - Output */
 
 /* Name */
-document.querySelector('#name').textContent = myProfile.name;
+document.querySelector('#name').textContent= myProfile.name;
 /* Photo with attributes */
-document.querySelector ('#photo').src = myProfile.photo;
+document.querySelector ('#photo').src= myProfile.photo;
 
 
 /* Favorite Foods List*/
@@ -72,14 +71,13 @@ myProfile.hobbies.forEach( function (hobby) {
 /* Places Lived DataList */
 
 function placesLivedLayout (placesLivedArray) {
-    const placesLength = placesLivedArray.map ((pL) => 
-        `<dt><b>${pL.place}</b></dt>
-
-        <dd><sup><small>${pL.length}</small></sup></dd>`
+    const placesLength=placesLivedArray.map ((pL) => 
+    `<dt><b>${pL.place}</b></dt>
+    <dd><sup><small>${pL.length}</small></sup></dd>`
     );
-    document.querySelector('#places-lived').innerHTML = placesLength.join("");
+    document.querySelector('#places-lived').innerHTML=placesLength.join("");
 };
 
-//let element = document.querySelector('');
-//element.style.color = 'red';
+
+
 placesLivedLayout (myProfile.placesLived);
