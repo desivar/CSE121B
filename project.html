@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=dev.to&sz=128">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/quote-card-background.css">
+</head>
+<body>
+    <div class="giphy"></div>
+    <div class="loader"></div>
+    <article class="quote_card" data-category="attitude">
+        <div class="quote_main-content">
+            <blockquote class="quote_quote" cite="https://jacintodesign.github.io/quotes-api/data/quotes.json">
+            </blockquote>
+            <span class="quote_author">
+            </span>
+        </div>
+        <div class="quote_buttons-container"></div>
+        <button class="quote_new-quote-btn">New Quote</button>
+        <div class="quote_social-media-buttons-container">
+            <!-- Twitter -->
+            <button class="quote_twitter-btn" title="Tweet this!">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="quote_whats-app">
+                <i class="fa-brands fa-whatsapp" title="Share this!"></i>
+            </button>
+        </div>
+    </div>
+
+</article>
+<script src="scripts/quote.js"></script>
+</body>
+</html>
